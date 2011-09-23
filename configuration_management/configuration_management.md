@@ -19,7 +19,7 @@
 
 <br />
 <br />
-* To do fast cluster deployment: who wants to manually setup 50 EC2 servers???
+* To do fast cluster deployment in the cloud: who wants to manually setup 50 EC2 servers?
 * To do fast crash-recovery: configuration management is the best documentation for a server's setup
 * To have consistent environments for development and production
 
@@ -48,7 +48,7 @@
 
 !SLIDE center
 
-# Let us create a Symfony-ready server with Puppet #
+# Let us create a Lighttpd+FastCGI+PHP+MySQL server with Puppet #
 ## Introduction to Puppet manifests ##
 
 
@@ -68,7 +68,7 @@
 	  service { "lighttpd":
 	    ensure => running,
 	    require => Package["lighttpd", "apache2.2-bin"],
-	  } 
+	  }
 
 	}
 
@@ -77,8 +77,9 @@
 	class lighttpd-phpmysql-fastcgi inherits lighttpd
 	{
 
-	  package { "php5-cgi":
+	  package { ["php5-cgi", "php5-cli", "php5-sqlite"]:
 	    ensure => present,
+            notify  => Service["lighttpd"],
 	  }
 
 	  package { "mysql-server":
@@ -95,31 +96,7 @@
 
 !SLIDE smaller
 
-	class symfony-server inherits lighttpd-phpmysql-fastcgi
-	{
-
-      package { ["php5-cli", "php5-sqlite"]:
-        ensure => present,
-        notify  => Service["lighttpd"],
-      }
-
-	  package { "git-core":
-	    ensure => present,
-	  }
-
-	  exec { "git clone git://github.com/symfony/symfony1.git":
-	    path    => "/usr/bin:/usr/sbin:/bin",
-	    cwd => "/var/www",
-	    creates => "/var/www/symfony1",
-	    require => Package["lighttpd", "git-core"],
-	  }
-
-	}
-
-
-!SLIDE smaller
-
-	class symfony-live-server inherits symfony-server
+	class web-server inherits lighttpd-phpmysql-fastcgi
 	{
 
 	  file { "/etc/lighttpd/conf-available/99-hosts.conf":
@@ -136,8 +113,8 @@
 
 	}
 
-	include symfony-live-server
-	notice("Symfony server is going live!")
+	include web-server
+
 
 !SLIDE
 
@@ -149,15 +126,15 @@
 <br />
 
 
-* Shell scripts are for administrators. Is all your team composed of admin experts?
-* Even for admin experts, Puppet and Chef recipes are more readable
+* Shell scripts are for ops, not for devs. We want both to have control.
+* Even on the ops side, Puppet and Chef recipes are more readable
 * Puppet and Chef make inheritance and modules easy
-* Puppet and Chef are <strong>idempotent</strong>: running them twice in a row will not break your system
+* Puppet and Chef are built to be <strong>idempotent</strong>: running them twice in a row will not break your system
 
 
 !SLIDE subsection
 
-# Develop and test on the same environment as in production! #
+# Same environment for development, testing and production #
 ## VM provisioning with Vagrant ##
 
 
@@ -166,7 +143,7 @@
 # Develop on local Virtual Machines #
 ## Vagrant ##
 
-* Vagrant is a tool to create local VirtualBox VMs, configured automatically by your Chef recipe or Puppet manifest 
+* Vagrant is a tool to create local VirtualBox VMs, configured automatically by your Chef recipe or Puppet manifest
 * It ensures you test on the same environment as your production server
 * It is VERY easy
 
@@ -208,3 +185,13 @@
 <br />
 <br />
     http://127.0.0.1:2011/
+
+
+!SLIDE
+
+# Vagrant is the ultimate level of consistency between development and production #
+## Vagrant use case ##
+
+* Level 1: same OS flavour<br/><br/>Development on Windows is <strong>forbidden</strong> if your production runs on Debian! This solves encoding/path problems and other useless headaches inside your code.
+* Level 2: fixed library versions<br/><br/>Python - virtualenv+pip / Ruby - rvm. This solves most external conflicts between libraries and language versions.
+* Level 3: same OS+architecture<br/><br/>Vagrant. This solves architecture consistency for compiled libraries. For example: https://bugs.launchpad.net/ubuntu/+source/matplotlib/+bug/295719

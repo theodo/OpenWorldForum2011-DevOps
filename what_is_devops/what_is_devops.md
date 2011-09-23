@@ -6,7 +6,7 @@
 
 !SLIDE center
 
-# How many here consider themselves SysAdmins? #
+# How many here consider themselves SysAdmins/Ops? #
 
 !SLIDE center
 
@@ -14,8 +14,17 @@
 
 !SLIDE center
 
+# Ops: how many of you have <strong>never</strong> written more than 50 lines of code? #
+
+!SLIDE center
+
 # Developers: how many of you have <strong>never</strong> deployed an application on a server? #
 
+!SLIDE center
+
+# For the end-user of an application, there is no such thing as dev or ops. #
+
+# For him there is only one type of people: IT people #
 
 !SLIDE
 
@@ -66,7 +75,7 @@
 !SLIDE
 
 # DevOps create the infrastructure that empower devs from the first line of code to the delivery #
-## How to be DevOps?
+## How to be DevOps? ##
 
 * Configuration management for rapid, repeatable server setup
 * Deployment scripts to abstract sysadmin tasks and empower developers
@@ -76,3 +85,15 @@
 !SLIDE center
 
 # DevOps is spreading agility to the whole IT project lifecycle #
+
+
+!SLIDE smaller
+
+# Of course, open-source is the main force behind devops #
+## Devops and open-source ##
+
+* <strong>Puppet</strong> - Ruby - github.com/puppetlabs/puppet
+* <strong>Chef</strong> - Ruby - github.com/opscode/chef
+* <strong>Vagrant</strong> - Ruby - github.com/mitchellh/vagrant
+* <strong>Fabric</strong> - Python - github.com/fabric/fabric
+* <strong>Jenkins</strong> - Java - github.com/jenkinsci/jenkins

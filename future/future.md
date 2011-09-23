@@ -1,6 +1,21 @@
 !SLIDE subsection
 
-# Next step #
+# Conclusion #
+
+!SLIDE center
+
+# Agile + cloud = devops #
+
+!SLIDE
+
+# Cloud and devops are not just new buzzwords #
+## Take-back home message ##
+
+* Code the infrastructure
+* Automate deployment for speed and fast recovery
+* Give developers the responsibility to deploy
+* Dev/test/prod on the exact same environment
+* Push Continuous Integration further with Continuous Deployment:
 
 !SLIDE
 
@@ -28,7 +43,7 @@
 
 !SLIDE center
 
-# Many thanks to Samuel @smaftoul Maftoul, organiser of the Paris DevOps meetup, who bootstrapped me on DevOps! #
+# Many thanks to Samuel @smaftoul Maftoul, organiser of the Paris DevOps meetup, who bootstrapped me on DevOps and helped on this presentation! #
 
 
 !SLIDE center

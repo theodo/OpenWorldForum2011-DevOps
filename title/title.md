@@ -4,6 +4,6 @@
 
 ## An introduction to devops ##
 
-### by Fabrice Bernhard ###
+### by Fabrice Bernhard with Samuel Maftoul ###
 
 

@@ -33,27 +33,22 @@
 
 # ![Theodo](img/theodo.png) #
 
-* Theodo does consulting and development of tailor-made applications for enterprises
+* Theodo does consulting and development of custom-made applications for enterprises
 * with open-source web technologies, agile methodologies and the highest standards of quality
-* to guarantee rapid application development, risk-free deployment and easy maintenance for every client.
+* to guarantee rapid application development, risk-free deployment and easy maintenance for our clients.
 
 
 
 
 
 
-!SLIDE
+!SLIDE center
 
-# ![Allomatch](img/allomatch.gif) #
+### ![Allomatch](img/clermont-bayonne.png) ###
 
 <br />
-<br />
-<br />
-<br />
-<br />
-<br />
 
-### Where can I watch the rugby game Clermont Ferrand - Bayonne tonight??? ###
+### Where can I watch this game tonight? ###
 
 !SLIDE
 
