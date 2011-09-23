@@ -44,7 +44,7 @@
 
 !SLIDE center
 
-### ![Allomatch](img/clermont-bayonne.png) ###
+### <img src="img/clermont-bayonne.png" alt="Allomatch" width="900" /> ###
 
 <br />
 

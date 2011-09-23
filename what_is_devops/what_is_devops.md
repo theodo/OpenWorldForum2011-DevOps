@@ -69,7 +69,7 @@
 
 # DevOps do RADD #
 
-![Downed silos](flatsilos.png)
+<img src="flatsilos.png" width="980" alt="Downed silos"/>
 
 
 !SLIDE
