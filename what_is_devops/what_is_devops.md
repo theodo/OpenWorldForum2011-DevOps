@@ -8,10 +8,13 @@
 
 # How many here consider themselves SysAdmins? #
 
+!SLIDE center
+
+# How many here consider themselves Developers? #
 
 !SLIDE center
 
-# How many here have <strong>never</strong> deployed an application on a server? #
+# Developers: how many of you have <strong>never</strong> deployed an application on a server? #
 
 
 !SLIDE
@@ -25,9 +28,9 @@
 <br />
 
 
-### <em>DevOps is a set of processes, methods and systems for communication, collaboration and integration between departments for Development (Applications/Software Engineering), Technology Operations and Quality Assurance (QA).</em> ###
+### <em>"DevOps" is an emerging set of principles, methods and practices for communication, collaboration and integration between software development and IT operations professionals.</em> ###
 
-### <em>It relates to the emerging understanding of the interdependence of development and operations in meeting a business' goal to producing timely software products and services</em> ###
+### <em>It has developed in response to the emerging understanding of the interdependence and importance of both the development and operations disciplines in meeting an organization's goal of rapidly producing software products and services.</em> ###
 
 !SLIDE incremental
 
@@ -38,7 +41,7 @@
 
 * Operations people are asked to protect the current value
 
-* <strong>Pro-Change VS Pro-Stability</strong> 
+* <strong>Pro-Change VS Pro-Stability</strong>
 
 !SLIDE center
 

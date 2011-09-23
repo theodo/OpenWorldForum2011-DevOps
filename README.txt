@@ -1,10 +1,10 @@
-Symfony Live 2011 "Adopt devops philosophy on your Symfony projects" Talk
+OWF 2011 "Adopt devops philosophy on your projects" Talk
 =========================================================================
 
-This is the ShowOff source for my Symfony Live 2011 talk
+This is the ShowOff source for my OWF 2011 talk
 
-  $ git clone git://github.com/fabriceb/sflive2011-devops.git
-  $ cd sflive2011-devops
+  $ git clone git://github.com/fabriceb/owf2011-devops.git
+  $ cd owf2011-devops
   $ showoff serve
 
 Requirements

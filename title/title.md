@@ -1,8 +1,8 @@
 !SLIDE subsection
 
-# Adopt Devops philosophy on your Symfony projects #
+# Adopt devops philosophy on your projects #
 
-## An introduction to Devops ##
+## An introduction to devops ##
 
 ### by Fabrice Bernhard ###
 

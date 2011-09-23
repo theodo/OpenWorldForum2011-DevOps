@@ -38,6 +38,7 @@ body
 {
   font-family: normal 20pt calibri, arial, sans-serif;
   color: #404040;
+  background: none repeat scroll 0 0 #FFFFFF;
 }
 
 .content
@@ -45,6 +46,10 @@ body
 	margin-top: 60pt !important;
 }
 
+#preso, .slide {
+    box-shadow: none;
+    background: none;
+}
 /* Styles génériques */
 
 
@@ -181,6 +186,6 @@ pre.sh_sourceCode .sh_keyword
 
 #slideInfo:before
 {
-	content: '@theodo | 03-04-2011 | ';
+	content: '@theodo  -  23-09-2011  -  ';
 }
 
